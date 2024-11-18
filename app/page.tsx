@@ -1,35 +1,44 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Laptop, Smartphone, Palette, BarChart, Users, CheckCircle, Phone, Mail, MapPin, Globe, Clock, Shield, Award, ThumbsUp, ChevronRight, ArrowRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import {
+  ArrowRight,
+  Award,
+  BarChart,
+  CheckCircle,
+  ChevronRight,
+  Globe,
+  Laptop,
+  Mail,
+  MapPin,
+  Palette,
+  Phone,
+  Shield,
+  Smartphone,
+  Users,
+} from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import Home from '@/components/page/Home'
+import BrandImage from './Image/Brand Solution.jpg'
+import DENT from './Image/DENT.jpg'
+import DigitalMarketingImage from './Image/Digital Marketing.jpg'
+import Canter from './Image/hh.jpg'
+import Hos from './Image/Hos.jpg'
+import Invan from './Image/Invan.jpg'
+import Mamagment from './Image/Mamagment.jpg'
+import MarketingStrategyImage from './Image/Marketing Strategy.jpg'
+import MobileAppImage from './Image/Mobile App Development.jpg'
+import BaShcoolk from './Image/Shcool.jpg'
+import SoftwareImage from './Image/Software Development.jpg'
+import placeholderImage from './Image/treee.jpg'
+import WebDevImage from './Image/Web Development.jpg'
+import Yes from './Image/Yes.jpg'
+import About from '@/components/page/spline/About'
+import Navbar from '@/components/page/Navbar'
+import Service from '@/components/page/Service'
 
-import blu from "./Image/white.png"
-import Canter from "./Image/hh.jpg"
-import Main from "./Image/Main.jpg"
-import Yes from "./Image/Yes.jpg"
-import yes from "./Image/Yes.jpg"
-import One from "./Image/One.jpg"
-import Bank from "./Image/Bank.jpg"
-import DENT from "./Image/DENT.jpg"
-import Hos from "./Image/Hos.jpg"
-import Invan from "./Image/Invan.jpg"
-import BaShcoolk from "./Image/Shcool.jpg"
-import Mamagment from "./Image/Mamagment.jpg"
-import Blog1 from "./Image/One.jpg"
-import Blog2 from "./Image/One.jpg"
-import Blog3 from "./Image/One.jpg"
-import placeholderImage from "./Image/treee.jpg"
-import SoftwareImage from './Image/Software Development.jpg'; 
-import MobileAppImage from './Image/Mobile App Development.jpg';
-import WebDevImage from './Image/Web Development.jpg';
-import BrandImage from './Image/Brand Solution.jpg';
-import DigitalMarketingImage from './Image/Digital Marketing.jpg';
-import MarketingStrategyImage from './Image/Marketing Strategy.jpg';
-
-export default function page () {
+export default function page() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -40,246 +49,174 @@ export default function page () {
     return () => clearTimeout(timer)
   }, [])
 
-  const projects = [
-    { title: "E-commerce Platform", category: "Web Development", image: placeholderImage },
-    { title: "Inventory Management System", category: "Software Development", image: placeholderImage },
-    { title: "Fitness Tracking App", category: "Mobile App Development", image: placeholderImage },
-    { title: "Brand Redesign", category: "Brand Solution", image: placeholderImage },
-    { title: "Cloud Migration", category: "IT Consulting", image: placeholderImage },
-    { title: "Healthcare Management", category: "Healthcare Solutions", image: placeholderImage },
-  ];
   const projectss = [
- 
     {
-      title: "Dental Project",
-      category: "Healthcare",
+      title: 'Dental Project',
+      category: 'Healthcare',
       image: DENT,
     },
     {
-      title: "Hospital Management",
-      category: "Healthcare",
+      title: 'Hospital Management',
+      category: 'Healthcare',
       image: Hos,
     },
     {
-      title: "Inventory Management",
-      category: "E-commerce",
+      title: 'Inventory Management',
+      category: 'E-commerce',
       image: Invan,
     },
     {
-      title: "School Management",
-      category: "Education",
+      title: 'School Management',
+      category: 'Education',
       image: BaShcoolk,
     },
     {
-      title: "Management System",
-      category: "Corporate",
+      title: 'Management System',
+      category: 'Corporate',
       image: Mamagment,
     },
     {
-      title: "Restrounts System",
-      category: "System",
+      title: 'Restrounts System',
+      category: 'System',
       image: Mamagment,
     },
-  ];
+  ]
 
   const services = [
     {
       icon: <Laptop className="w-12 h-12 text-blue-600" />,
-      title: "Software Development",
-      description: "Custom software solutions that grow with your business, enhance productivity, and improve your bottom line.",
+      title: 'Software Development',
+      description:
+        'Custom software solutions that grow with your business, enhance productivity, and improve your bottom line.',
       image: SoftwareImage, // Add the corresponding image
     },
     {
       icon: <Smartphone className="w-12 h-12 text-blue-600" />,
-      title: "Mobile App Development",
-      description: "Create apps that work on both iOS and Android, saving time and resources while maximizing reach.",
+      title: 'Mobile App Development',
+      description:
+        'Create apps that work on both iOS and Android, saving time and resources while maximizing reach.',
       image: MobileAppImage, // Add the corresponding image
     },
     {
       icon: <Globe className="w-12 h-12 text-blue-600" />,
-      title: "Web Development",
-      description: "Our development team builds custom websites that are robust, scalable, and easy to navigate.",
+      title: 'Web Development',
+      description:
+        'Our development team builds custom websites that are robust, scalable, and easy to navigate.',
       image: WebDevImage, // Add the corresponding image
     },
     {
       icon: <Palette className="w-12 h-12 text-blue-600" />,
-      title: "Brand Solution",
-      description: "From logos to full branding, we create identities that resonate with audiences.",
+      title: 'Brand Solution',
+      description:
+        'From logos to full branding, we create identities that resonate with audiences.',
       image: BrandImage, // Add the corresponding image
     },
     {
       icon: <BarChart className="w-12 h-12 text-blue-600" />,
-      title: "Digital Marketing",
-      description: "Rank higher and reach your target audience with our data-driven SEO strategies.",
+      title: 'Digital Marketing',
+      description:
+        'Rank higher and reach your target audience with our data-driven SEO strategies.',
       image: DigitalMarketingImage, // Add the corresponding image
     },
     {
       icon: <Users className="w-12 h-12 text-blue-600" />,
-      title: "Marketing Strategy",
-      description: "Craft and execute campaigns tailored to meet your specific business goals.",
+      title: 'Marketing Strategy',
+      description:
+        'Craft and execute campaigns tailored to meet your specific business goals.',
       image: MarketingStrategyImage, // Add the corresponding image
     },
-  ];
-
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <header className="bg-blue-600 text-white py-2 sticky top-0 z-50">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <Image src={blu} alt="Super Technology Solution Logo" className="w-40 h-auto" width={150} height={40} />
-          <nav className="hidden md:flex space-x-6">
-            {['About', 'Services', 'Process', 'Portfolio', 'Testimonials', 'Clients', 'Blog', 'Contact'].map((item) => (
-              <Link key={item} href={`#${item.toLowerCase()}`} className="hover:text-blue-200 transition-colors">
-                {item}
-              </Link>
-            ))}
-          </nav>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
-          >
-            Get Started
-          </motion.button>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-gradient-to-b bg-[#fff]">
+      <Navbar/>
+      <Home />
+      <Service/>
+      <About />
       <main className="container mx-auto px-4 py-8">
-        <section className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl font-bold mb-6 text-blue-600">Your Partner in Digital Transformation</h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-800">Innovative Solutions for a Dynamic World</p>
-            <div className="flex justify-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors flex items-center"
-              >
-                Our Services <ArrowRight className="ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors flex items-center"
-              >
-                Contact Us Now <Phone className="ml-2" />
-              </motion.button>
-            </div>
-          </motion.div>
-                    <motion.div
-                initial={{ opacity: 0, y: 50 }}
+       
+
+       
+
+        <section id="services" className="mb-20">
+          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
+            Our Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex justify-center items-center mt-12"
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 group"
               >
                 <Image
-                  src={Canter}
-                  alt="Digital Transformation"
-                  className="rounded-lg shadow-2xl"
-                  width={800}  // Adjust the width as needed
-                  height={200} // Adjust the height as needed
-                  style={{ maxWidth: '100%', height: 'auto' }} // Make it responsive
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                  width={400}
+                  height={300}
                 />
-              </motion.div>
-        </section>
-
-        <section id="about" className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">About Us</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-blue-800">Who We Are</h3>
-              <p className="mb-4 text-blue-700">Super Technology Solution is a forward-thinking tech company focused on driving success for our clients through cutting-edge software, digital, and marketing solutions.</p>
-              <p className="mb-4 text-blue-700">Since our inception, we have helped businesses of all sizes modernize, scale, and succeed with solutions tailored to meet specific industry demands.</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Image src={placeholderImage} alt="Our Team" className="rounded-lg shadow-lg" width={500} height={300} />
-            </motion.div>
-          </div>
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-4 text-blue-800">Our Values</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { icon: <Laptop className="w-8 h-8 text-blue-600" />, title: "Innovation", description: "Constantly pushing boundaries to deliver modern, effective solutions." },
-                { icon: <Shield className="w-8 h-8 text-blue-600" />, title: "Integrity", description: "Building lasting relationships with transparency and trust." },
-                { icon: <Users className="w-8 h-8 text-blue-600" />, title: "Customer Success", description: "Our client's success is our success." },
-                { icon: <Award className="w-8 h-8 text-blue-600" />, title: "Excellence", description: "We strive for excellence in every project, no matter the size." },
-              ].map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                <div className="flex items-center space-x-4 mb-4">
+                  {service.icon}
+                  <h3 className="text-xl font-semibold text-blue-700">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="mb-4 text-blue-600">{service.description}</p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors flex items-center"
                 >
-                  <div className="flex items-center mb-4">
-                    {value.icon}
-                    <h4 className="text-lg font-semibold ml-2 text-blue-700">{value.title}</h4>
-                  </div>
-                  <p className="text-blue-600">{value.description}</p>
-                </motion.div>
-              ))}
-            </div>
+                  Learn More <ChevronRight className="w-4 h-4 ml-1" />
+                </motion.button>
+              </motion.div>
+            ))}
           </div>
         </section>
-
-      <section id="services" className="mb-20">
-  <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Our Services</h2>
-  <div className="grid md:grid-cols-3 gap-8">
-    {services.map((service, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 group"
-      >
-        <Image 
-          src={service.image} 
-          alt={service.title} 
-          className="w-full h-40 object-cover rounded-lg mb-4" 
-          width={400} 
-          height={300} 
-        />
-        <div className="flex items-center space-x-4 mb-4">
-          {service.icon}
-          <h3 className="text-xl font-semibold text-blue-700">{service.title}</h3>
-        </div>
-        <p className="mb-4 text-blue-600">{service.description}</p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors flex items-center"
-        >
-          Learn More <ChevronRight className="w-4 h-4 ml-1" />
-        </motion.button>
-      </motion.div>
-    ))}
-  </div>
-</section>
-
 
         <section id="process" className="mb-20 bg-blue-50 py-16 rounded-lg">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Our Process</h2>
-          <p className="text-center mb-12 max-w-2xl mx-auto text-blue-700">We follow a structured process to ensure that our services are delivered efficiently, on time, and within budget.</p>
+          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
+            Our Process
+          </h2>
+          <p className="text-center mb-12 max-w-2xl mx-auto text-blue-700">
+            We follow a structured process to ensure that our services are
+            delivered efficiently, on time, and within budget.
+          </p>
           <div className="grid md:grid-cols-5 gap-8">
             {[
-              { icon: <Users className="w-12 h-12 text-blue-600" />, title: "Consultation", description: "We start with a detailed consultation to understand your needs, objectives, and vision." },
-              { icon: <CheckCircle className="w-12 h-12 text-blue-600" />, title: "Planning", description: "Our team prepares a detailed project plan, outlining the scope, timeline, and milestones." },
-              { icon: <Palette className="w-12 h-12 text-blue-600" />, title: "Design", description: "We create innovative designs with close attention to usability and aesthetics." },
-              { icon: <Laptop className="w-12 h-12 text-blue-600" />, title: "Development", description: "Our team brings your ideas to life through expert development and coding." },
-              { icon: <Shield className="w-12 h-12 text-blue-600" />, title: "Testing & Support", description: "We rigorously test every solution and provide ongoing support after launch." },
+              {
+                icon: <Users className="w-12 h-12 text-blue-600" />,
+                title: 'Consultation',
+                description:
+                  'We start with a detailed consultation to understand your needs, objectives, and vision.',
+              },
+              {
+                icon: <CheckCircle className="w-12 h-12 text-blue-600" />,
+                title: 'Planning',
+                description:
+                  'Our team prepares a detailed project plan, outlining the scope, timeline, and milestones.',
+              },
+              {
+                icon: <Palette className="w-12 h-12 text-blue-600" />,
+                title: 'Design',
+                description:
+                  'We create innovative designs with close attention to usability and aesthetics.',
+              },
+              {
+                icon: <Laptop className="w-12 h-12 text-blue-600" />,
+                title: 'Development',
+                description:
+                  'Our team brings your ideas to life through expert development and coding.',
+              },
+              {
+                icon: <Shield className="w-12 h-12 text-blue-600" />,
+                title: 'Testing & Support',
+                description:
+                  'We rigorously test every solution and provide ongoing support after launch.',
+              },
             ].map((step, index) => (
               <motion.div
                 key={index}
@@ -291,7 +228,9 @@ export default function page () {
                 <div className="bg-white rounded-full p-6 inline-block mb-4 shadow-md">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-blue-700">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-blue-700">
+                  {step.title}
+                </h3>
                 <p className="text-sm text-blue-600">{step.description}</p>
               </motion.div>
             ))}
@@ -299,60 +238,92 @@ export default function page () {
         </section>
 
         <section id="portfolio" className="mb-20">
-      <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Our Portfolio</h2>
-      <p className="text-center mb-12 max-w-2xl mx-auto text-blue-700">
-        We take pride in the projects we've completed for clients across different industries. Here's a glimpse of our recent work:
-      </p>
-      <div className="grid md:grid-cols-3 gap-8">
-        {projectss.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden group"
-          >
-            <Image 
-              src={project.image} 
-              alt={project.title} 
-              width={400} 
-              height={300} 
-              className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" 
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">{project.title}</h3>
-              <p className="text-sm text-blue-600 mb-4">{project.category}</p>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors flex items-center"
+          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
+            Our Portfolio
+          </h2>
+          <p className="text-center mb-12 max-w-2xl mx-auto text-blue-700">
+            We take pride in the projects we've completed for clients across
+            different industries. Here's a glimpse of our recent work:
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {projectss.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-md overflow-hidden group"
               >
-                View Project <ChevronRight className="w-4 h-4 ml-1" />
-              </motion.button>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      <div className="text-center mt-8">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
-        >
-          View All Projects
-        </motion.button>
-      </div>
-    </section>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold mb-2 text-blue-700">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-blue-600 mb-4">
+                    {project.category}
+                  </p>
 
-        <section id="testimonials" className="mb-20 bg-blue-50 py-16 rounded-lg">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Client Testimonials</h2>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors flex items-center"
+                  >
+                    View Project <ChevronRight className="w-4 h-4 ml-1" />
+                  </motion.button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition-colors"
+            >
+              View All Projects
+            </motion.button>
+          </div>
+        </section>
+
+        <section
+          id="testimonials"
+          className="mb-20 bg-blue-50 py-16 rounded-lg"
+        >
+          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
+            Client Testimonials
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { name: "Ahmed Ali", role: "Founder of Al Noor Group", quote: "Super Technology Solution provided us with an outstanding website that has transformed our online presence. Their team was professional, responsive, and always ready to make adjustments as needed. " },
-              { name: "Sarah Mohamed", role: "Operations Manager of Hargeisa Foods", quote: "The mobile app developed by Super Technology Solution has streamlined our operations and improved customer engagement. Their work exceeded our expectations." },
-              { name: "Hassan Abdi", role: "CEO of Tech Innovators", quote: "Working with Super Technology Solution was a game-changer for our business. Their IT consulting services helped us make informed decisions and optimize our technology infrastructure." },
-              { name: "Amina Jama", role: "Marketing Director at Global Reach", quote: "The digital marketing campaign designed by Super Technology Solution significantly increased our online visibility and lead generation. Their data-driven approach delivered tangible results." },
+              {
+                name: 'Ahmed Ali',
+                role: 'Founder of Al Noor Group',
+                quote:
+                  'Super Technology Solution provided us with an outstanding website that has transformed our online presence. Their team was professional, responsive, and always ready to make adjustments as needed. ',
+              },
+              {
+                name: 'Sarah Mohamed',
+                role: 'Operations Manager of Hargeisa Foods',
+                quote:
+                  'The mobile app developed by Super Technology Solution has streamlined our operations and improved customer engagement. Their work exceeded our expectations.',
+              },
+              {
+                name: 'Hassan Abdi',
+                role: 'CEO of Tech Innovators',
+                quote:
+                  'Working with Super Technology Solution was a game-changer for our business. Their IT consulting services helped us make informed decisions and optimize our technology infrastructure.',
+              },
+              {
+                name: 'Amina Jama',
+                role: 'Marketing Director at Global Reach',
+                quote:
+                  'The digital marketing campaign designed by Super Technology Solution significantly increased our online visibility and lead generation. Their data-driven approach delivered tangible results.',
+              },
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -361,11 +332,21 @@ export default function page () {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-md"
               >
-                <p className="italic mb-4 text-blue-600">"{testimonial.quote}"</p>
+                <p className="italic mb-4 text-blue-600">
+                  "{testimonial.quote}"
+                </p>
                 <div className="flex items-center">
-                  <Image src={Yes} alt={testimonial.name} width={50} height={50} className="rounded-full mr-4" />
+                  <Image
+                    src={Yes}
+                    alt={testimonial.name}
+                    width={50}
+                    height={50}
+                    className="rounded-full mr-4"
+                  />
                   <div>
-                    <p className="font-semibold text-blue-700">{testimonial.name}</p>
+                    <p className="font-semibold text-blue-700">
+                      {testimonial.name}
+                    </p>
                     <p className="text-sm text-blue-600">{testimonial.role}</p>
                   </div>
                 </div>
@@ -375,14 +356,21 @@ export default function page () {
         </section>
 
         <section id="contact" className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Contact Us</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
+            Contact Us
+          </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <p className="mb-6 text-lg text-blue-700">Ready to take your business to the next level? Get in touch with Super Technology Solution today! Whether you need a new website, mobile app, or a complete digital transformation, we're here to make it happen.</p>
+              <p className="mb-6 text-lg text-blue-700">
+                Ready to take your business to the next level? Get in touch with
+                Super Technology Solution today! Whether you need a new website,
+                mobile app, or a complete digital transformation, we're here to
+                make it happen.
+              </p>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-blue-600 mr-2" />
@@ -394,17 +382,27 @@ export default function page () {
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 text-blue-600 mr-2" />
-                  <span className="text-blue-700">supertechs2025@gmail.com</span>
+                  <span className="text-blue-700">
+                    supertechs2025@gmail.com
+                  </span>
                 </div>
               </div>
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4 text-blue-700">Follow Us</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-700">
+                  Follow Us
+                </h3>
                 <div className="flex space-x-4">
-                  {['Facebook', 'Twitter', 'LinkedIn', 'Instagram'].map((social) => (
-                    <a key={social} href="#" className="text-blue-600 hover:text-blue-700 transition-colors">
-                      {social}
-                    </a>
-                  ))}
+                  {['Facebook', 'Twitter', 'LinkedIn', 'Instagram'].map(
+                    (social) => (
+                      <a
+                        key={social}
+                        href="#"
+                        className="text-blue-600 hover:text-blue-700 transition-colors"
+                      >
+                        {social}
+                      </a>
+                    )
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -414,23 +412,65 @@ export default function page () {
               transition={{ duration: 0.8 }}
               className="bg-white p-6 rounded-lg shadow-md"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-blue-700">Send Us a Message</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-blue-700">
+                Send Us a Message
+              </h3>
               <form className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block mb-1 font-medium text-blue-600">Name</label>
-                  <input type="text" id="name" className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none" required />
+                  <label
+                    htmlFor="name"
+                    className="block mb-1 font-medium text-blue-600"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none"
+                    required
+                  />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block mb-1 font-medium text-blue-600">Email</label>
-                  <input type="email" id="email" className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none" required />
+                  <label
+                    htmlFor="email"
+                    className="block mb-1 font-medium text-blue-600"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none"
+                    required
+                  />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block mb-1 font-medium text-blue-600">Subject</label>
-                  <input type="text" id="subject" className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none" required />
+                  <label
+                    htmlFor="subject"
+                    className="block mb-1 font-medium text-blue-600"
+                  >
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none"
+                    required
+                  />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block mb-1 font-medium text-blue-600">Message</label>
-                  <textarea id="message" rows={4} className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none" required></textarea>
+                  <label
+                    htmlFor="message"
+                    className="block mb-1 font-medium text-blue-600"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full p-2 border border-blue-300 rounded focus:ring focus:ring-blue-200 focus:outline-none"
+                    required
+                  ></textarea>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -450,14 +490,32 @@ export default function page () {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Super Technology Solution</h3>
-              <p className="mb-4">Innovative technology for modern businesses in Hargeisa and beyond.</p>
+              <h3 className="text-xl font-semibold mb-4">
+                Super Technology Solution
+              </h3>
+              <p className="mb-4">
+                Innovative technology for modern businesses in Hargeisa and
+                beyond.
+              </p>
               <div className="flex space-x-4">
                 {['Facebook', 'Twitter'].map((social) => (
-                  <a key={social} href="#" className="text-blue-300 hover:text-white transition-colors">
+                  <a
+                    key={social}
+                    href="#"
+                    className="text-blue-300 hover:text-white transition-colors"
+                  >
                     <span className="sr-only">{social}</span>
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   </a>
                 ))}
@@ -466,9 +524,18 @@ export default function page () {
             <div>
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                {['About Us', 'Services', 'Portfolio', 'Testimonials', 'Contact'].map((link) => (
+                {[
+                  'About Us',
+                  'Services',
+                  'Portfolio',
+                  'Testimonials',
+                  'Contact',
+                ].map((link) => (
                   <li key={link}>
-                    <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="hover:text-blue-300 transition-colors">
+                    <a
+                      href={`#${link.toLowerCase().replace(' ', '-')}`}
+                      className="hover:text-blue-300 transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -478,9 +545,18 @@ export default function page () {
             <div>
               <h3 className="text-xl font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
-                {['Software Development', 'Mobile App Development', 'Web Development', 'Brand Solution', 'Digital Marketing'].map((service) => (
+                {[
+                  'Software Development',
+                  'Mobile App Development',
+                  'Web Development',
+                  'Brand Solution',
+                  'Digital Marketing',
+                ].map((service) => (
                   <li key={service}>
-                    <a href="#" className="hover:text-blue-300 transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-blue-300 transition-colors"
+                    >
                       {service}
                     </a>
                   </li>
@@ -489,9 +565,15 @@ export default function page () {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-              <p className="mb-4">Stay updated with our latest news and offers.</p>
+              <p className="mb-4">
+                Stay updated with our latest news and offers.
+              </p>
               <form className="flex">
-                <input type="email" placeholder="Your email" className="bg-blue-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="bg-blue-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
