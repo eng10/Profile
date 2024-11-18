@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
+import Image from 'next/image'
+import logo from '@/app/Image/iconLogo.png'
 
 const Navbar = () => {
   function NavLink({ href, children }: any) {
@@ -49,8 +51,13 @@ const Navbar = () => {
     <div className="container mx-auto px-4 py-4">
       <div className="flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-blue-600" aria-hidden="true" />
-          <span className="text-xl font-bold">Go Squared</span>
+        <Image
+        src={logo} 
+        alt='SuperTech'
+        width={80}
+        height={80}
+        />
+          {/* <span className="text-xl font-bold">Go Squared</span> */}
         </Link>
         <div className="hidden md:flex space-x-8">
           <NavLink href="/" className="nav-link hover:text-blue-600">

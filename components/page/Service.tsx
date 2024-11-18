@@ -11,23 +11,28 @@ import soft from '@/app/Image/soft.jpg'
 const serviceCards = [
   {
     title: 'Software Design',
-    description: 'We provide best Software Service for any type of business as strategy, management.',
-    imageSrc: soft,
+    description:
+      'We provide best Software Service for any type of business as strategy, management.',
+    imageSrc:
+      'https://i.pinimg.com/736x/00/95/e3/0095e3a1e415290325fe9cb5a64606be.jpg',
     imageAlt: 'Software Design illustration',
   },
   {
     title: 'Data Security',
-    description: 'We provide best Software Service for any type of business as strategy, management.',
-    imageSrc: mobile,
+    description:
+      'We provide best Software Service for any type of business as strategy, management.',
+    imageSrc:
+      'https://i.pinimg.com/736x/2e/4a/cc/2e4acca6b73bdd8734a158764e433b1e.jpg',
     imageAlt: 'Data Security illustration',
   },
   {
     title: 'Mobile App',
-    description: 'We provide best Software Service for any type of business as strategy, management.',
-    imageSrc: mobile,
+    description:
+      'We provide best Software Service for any type of business as strategy, management.',
+    imageSrc:
+      'https://i.pinimg.com/736x/02/52/e3/0252e3a3282f752ab9c0e97400eb7778.jpg',
     imageAlt: 'Data Security illustration',
   },
- 
 ]
 
 export default function Service() {
@@ -92,13 +97,15 @@ export default function Service() {
             <motion.div key={index} variants={cardVariants}>
               <Card className="group relative h-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
                 <CardHeader>
-                  <div className="mx-auto w-32">
+                  <div className="mx-auto w-full">
                     <Image
                       src={card.imageSrc}
                       alt={card.imageAlt}
-                      className="h-32 w-32 object-contain"
-                      width={100}
-                      height={100}
+                      width={128}
+                      height={128}
+                      quality={90}
+                      layout="responsive"
+                      className="rounded-[5px] "
                     />
                   </div>
                 </CardHeader>

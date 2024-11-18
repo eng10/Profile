@@ -37,6 +37,7 @@ import Yes from './Image/Yes.jpg'
 import About from '@/components/page/spline/About'
 import Navbar from '@/components/page/Navbar'
 import Service from '@/components/page/Service'
+import Progress from '@/components/page/Progress'
 
 export default function page() {
   const [isVisible, setIsVisible] = useState(false)
@@ -129,114 +130,12 @@ export default function page() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b bg-[#fff]">
-      <Navbar/>
+      <Navbar />
       <Home />
-      <Service/>
+      <Service />
       <About />
+      <Progress />
       <main className="container mx-auto px-4 py-8">
-       
-
-       
-
-        <section id="services" className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
-            Our Services
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 group"
-              >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-40 object-cover rounded-lg mb-4"
-                  width={400}
-                  height={300}
-                />
-                <div className="flex items-center space-x-4 mb-4">
-                  {service.icon}
-                  <h3 className="text-xl font-semibold text-blue-700">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="mb-4 text-blue-600">{service.description}</p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors flex items-center"
-                >
-                  Learn More <ChevronRight className="w-4 h-4 ml-1" />
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        <section id="process" className="mb-20 bg-blue-50 py-16 rounded-lg">
-          <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
-            Our Process
-          </h2>
-          <p className="text-center mb-12 max-w-2xl mx-auto text-blue-700">
-            We follow a structured process to ensure that our services are
-            delivered efficiently, on time, and within budget.
-          </p>
-          <div className="grid md:grid-cols-5 gap-8">
-            {[
-              {
-                icon: <Users className="w-12 h-12 text-blue-600" />,
-                title: 'Consultation',
-                description:
-                  'We start with a detailed consultation to understand your needs, objectives, and vision.',
-              },
-              {
-                icon: <CheckCircle className="w-12 h-12 text-blue-600" />,
-                title: 'Planning',
-                description:
-                  'Our team prepares a detailed project plan, outlining the scope, timeline, and milestones.',
-              },
-              {
-                icon: <Palette className="w-12 h-12 text-blue-600" />,
-                title: 'Design',
-                description:
-                  'We create innovative designs with close attention to usability and aesthetics.',
-              },
-              {
-                icon: <Laptop className="w-12 h-12 text-blue-600" />,
-                title: 'Development',
-                description:
-                  'Our team brings your ideas to life through expert development and coding.',
-              },
-              {
-                icon: <Shield className="w-12 h-12 text-blue-600" />,
-                title: 'Testing & Support',
-                description:
-                  'We rigorously test every solution and provide ongoing support after launch.',
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="bg-white rounded-full p-6 inline-block mb-4 shadow-md">
-                  {step.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-blue-700">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-blue-600">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
         <section id="portfolio" className="mb-20">
           <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">
             Our Portfolio
