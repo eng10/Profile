@@ -19,29 +19,28 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Home from "@/components/page/Home";
+import Home from "@/app/home/page";
 
-import About from "@/components/page/spline/About";
-import Navbar from "@/components/page/Navbar";
-import Service from "@/components/page/Service";
-import Progress from "@/components/page/Progress";
-import Projects from "@/components/page/Projects";
-import Contact from "@/components/page/Contact";
-import Footer from "@/components/page/Footer";
-import Testimonials from "@/components/page/Testimonials";
+import About from "@/app/spline/About";
+// import Navbar from "@/app/navbar/page";
+import Service from "@/app/service/page";
+import Progress from "@/app/progress/Progress";
+import Projects from "@/app/projects/page";
+import Contact from "@/app/contact/page";
+import Footer from "@/app/footer/page";
+import Testimonials from "@/app/testimonials/page";
+import Header from "@/components/Header";
 
 export default function page() {
   return (
     <div className="min-h-screen bg-gradient-to-b bg-[#fff]">
-      <Navbar />
       <Home />
       <Service />
       <About />
       <Progress />
-      <Testimonials/>
+      <Testimonials />
       <Projects />
       <Contact />
-      <Footer />
     </div>
   );
 }

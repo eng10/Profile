@@ -8,7 +8,7 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "@/app/Image/iconLogo.png";
 
-export default function Component() {
+export default function Header() {
   function NavLink({
     href,
     children,
@@ -46,8 +46,8 @@ export default function Component() {
         <SheetContent side="left" className="w-[300px] sm:w-[400px]">
           <nav className="flex flex-col gap-4">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">Projects</NavLink>
-            <NavLink href="/services">Our Services</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/service">Our Services</NavLink>
             <NavLink href="/testimonials">Testimonials</NavLink>
             <NavLink href="/contact">Contact Us</NavLink>
           </nav>
@@ -65,9 +65,9 @@ export default function Component() {
           </Link>
           <div className="hidden md:flex space-x-8">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">Projects</NavLink>
-            <NavLink href="/services">Our Services</NavLink>
-            <NavLink href="/Testimonials">Testimonials</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/service">Our Services</NavLink>
+            <NavLink href="/testimonials">Testimonials</NavLink>
             <NavLink href="/contact">Contact Us</NavLink>
           </div>
           <MobileNav />

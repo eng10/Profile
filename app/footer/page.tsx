@@ -3,7 +3,7 @@ import { Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 import logo from "@/app/Image/iconLogo.png";
 
-export default function Footer() {
+export default function footer() {
   const newDate = new Date();
   const year = newDate.getFullYear();
 
@@ -62,22 +62,19 @@ export default function Footer() {
             {/* <h2 className="text-xl font-bold">AR SHAKIR</h2> */}
             <Image src={logo} width={80} height={80} alt="supertech" />
             <p className="text-muted-foreground text-sm">
-              Finance helps companies manage payments easily.
+              Think about your company that has taken off.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-primary hover:text-primary/80">
+              <Link target="_blank" href="https://www.linkedin.com/in/super-technology-solution-436a86330/"  className="text-primary hover:text-primary/80">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="text-primary hover:text-primary/80">
+              <Link target="_blank" href="https://www.facebook.com/supertechnology10" className="text-primary hover:text-primary/80">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-primary hover:text-primary/80">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-primary hover:text-primary/80">
+              
+              <Link target="_blank" href="#" className="text-primary hover:text-primary/80">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
@@ -90,15 +87,15 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/projects"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  About Us
+                  projects
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/service"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
                   Service Us
@@ -106,15 +103,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/testimonials"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  Projects
+                  Testimonials
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
                   Contact
@@ -122,10 +119,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  Testmonials
+                  Home
                 </Link>
               </li>
             </ul>
@@ -140,7 +137,7 @@ export default function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  Invoicing
+                  Branding solution
                 </Link>
               </li>
               <li>
@@ -148,7 +145,7 @@ export default function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  Contract
+                  software applications
                 </Link>
               </li>
               <li></li>
@@ -157,7 +154,7 @@ export default function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary text-sm"
                 >
-                  Proposal
+                  mobile applications
                 </Link>
               </li>
             </ul>
